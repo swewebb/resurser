@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Emmet</title>
+
+    <link rel="stylesheet" href="styles/solarized-dark.css">
+
+    <style>
+    html {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 20px;
+    }
+    body {
+      margin: 0;
+      background: #1FA2FF;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+    .wrapper {
+      padding: 1rem 2rem;
+      margin: 0 0 0 2rem;
+      max-width: 700px;
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    h2 {
+      margin-top: 2rem;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td, th {
+      border: 1px solid #000;
+      padding: 0.5rem 1rem;
+    }
+
+    th {
+      background: #A1FECD;
+    }
+
+    tr:nth-child(even) {
+      background: rgb(240, 240, 240);
+    }
+    tr:nth-child(odd) {
+      background: rgb(255, 255, 255);
+    }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Emmet</h1>
+
+      <p>Emmet är inbyggt från början i Codepen och vi använder
+        <strong>TAB</strong> för att köra vår
+        emmetsträng.</p>
+
+      <h2>En tagg i taget</h2>
+
+      <p><img src="enkel.gif" alt="Exempel 1" /></p>
+
+      <p>Det enklaste sättet att använda tekniken är att skriva taggens nyckelord och sedan trycka på TAB, till exempel <strong>h1 + TAB</strong>.</p>
+
+      <h2>Använda plustecknet</h2>
+
+      <p><img src="emmet-plus.gif" alt="Exempel 1" /></p>
+
+      <p>Använder man plustecknet så skapar man två element efter varandra.
+        Skriver vi <strong>h1+p</strong> kommer vi
+        således få först en h1:a och därefter ett p.</p>
+
+      <h2>Använda gångertecknet</h2>
+
+      <p><img src="emmet-ganger.gif" alt="Gångertecken" /></p>
+
+      <p>Vill vi skapa flera element av samma typ så kan vi använda oss av
+        gångertecknet, till exempel <strong>p*3</strong>.</p>
+
+      <h2>Använda pil</h2>
+
+      <p><img src="emmet-pil.gif" alt="Pil1" /></p>
+
+      <p>Med pilen kan vi skapa föräldrataggen och lägga till barntaggar direkt, till exempel <strong>ol>li*2</strong>.</p>
+
+      <p><img src="emmet-pil2.gif" alt="Pil2" /></p>
+
+      <p>Vi kan även använda pilen tillsammans med <strong>lorem</strong> för att
+        fylla en tagg med innehåll.</p>
+
+      <h2>Använda parenteser</h2>
+
+      <h3>Exempel 1</h3>
+
+      <pre class="hljs"><code class="html">&lt;h1&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;/p&gt;</code></pre>
+      
+      <p>Låt säga att vi vill skapa koden ovan med hjälp av emmet</p>
+      
+      <p><img src="emmet-parantes1.gif" alt="Parenteser" /></p>
+
+      <p>För att göra det skriver vi <strong>h1+p*2+(ol&gt;li*2)+p</strong>.</p>
+      <p>Som du ser använder vi parenteser för att avgränsa delar av
+        emmetsträngen. Om
+        vi hade hoppat över parenteserna så skulle sista p-taggen återfinnas som
+        ett barnelement i listan.</p>
+
+      <h3>Exempel 2</h3>
+
+      <pre><code class="html">&lt;div class=&quot;card&quot;&gt;
+  &lt;h1&gt;&lt;/h1&gt;
+  &lt;img src=&quot;&quot; alt=&quot;&quot;&gt;
+  &lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+  &lt;h1&gt;&lt;/h1&gt;
+  &lt;img src=&quot;&quot; alt=&quot;&quot;&gt;
+  &lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+      <p>Låt säga att vi vill skapa koden ovan med hjälp av emmet</p>
+
+      <p><img src="emmet-parantes2.gif"  alt="Parenteser" /></p>
+
+      <p>För att göra det skriver vi <strong>(.card&gt;h1+img+p)*2</strong>.
+        Som du ser så räcker det med att skriva <strong>.card</strong> för att skapa en div med klassen
+        card.</p>
+
+      <h2>Sätta attribut</h2>
+
+      <p><img src="emmet-attribut.gif" alt="Attribut-1" /></p>
+
+      <p>Med hjälp av fyrkantsparenteser kan vi sätta värdet på ett attribut, i det här fallet <strong>img[src=kaka.png]</strong>.</p>
+      <p>Vill vi sätta flera attribut samtidigt använder vi ett mellanslag mellan
+        attributen, till exempel <strong>img[src=kaka.png alt=chokladkaka]</strong>.</p>
+
+      <h2>Lägga till innehåll</h2>
+
+      <p><img src="emmet-klammer1.gif" alt="Klammer" /></p>
+
+      <p>Med hjälp av klammerparenteser (&ldquo;måsvingar&rdquo;) kan vi lägga
+        till innehåll i en tagg direkt i emmetsträngen.</p>
+
+      <p><img src="emmet-klammer2.gif" alt="Klammer" /></p>
+
+      <p>Här visar vi hur vi kan sätta både attribut och innehåll på en gång.</p>
+
+      <h2>Skapa en kommentar</h2>
+
+      <p><img src="emmet-kommentar.gif" alt="Kommentar" /></p>
+
+      <p>Vill man skapa en  kommentar som visar använder vi <strong>c</strong>.</p>
+
+      <h2>Lägga till flera klasser på en gång</h2>
+
+      <p><img src="emmet-klasser2.gif" alt="Klasser" /></p>
+
+      <p>Om man vill lägga till flera klasser på en gång så skriver man ihop
+        klasserna, till exempel <strong>.one.two</strong>.</p>
+
+      <h2>Lägga till nummer</h2>
+
+      <p><img src="emmet-dollar.gif" alt="Nummer" /></p>
+
+      <p>Man kan med <strong>$-tecknet</strong> lägga till nummer. I exemplet här
+        skriver vi <strong>ul&gt;li.item${test$}*2</strong> och som du ser
+        kan vi numrera t ex både klassnamn och i innehållet.</p>
+    </div>
+
+    <script src="highlight.pack.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+  </body>
+</html>

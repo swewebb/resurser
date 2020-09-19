@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Emmet</title>
+
+    <link rel="stylesheet" href="styles/solarized-dark.css">
+
+    <style>
+    html {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 20px;
+    }
+    body {
+      margin: 0;
+      background: #1FA2FF;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+    .wrapper {
+      padding: 1rem 2rem;
+      margin: 0 0 0 2rem;
+      max-width: 700px;
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    h2 {
+      margin-top: 2rem;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td, th {
+      border: 1px solid #000;
+      padding: 0.5rem 1rem;
+    }
+
+    th {
+      background: #A1FECD;
+    }
+
+    tr:nth-child(even) {
+      background: rgb(240, 240, 240);
+    }
+    tr:nth-child(odd) {
+      background: rgb(255, 255, 255);
+    }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Emmet</h1>
+
+      <p>Emmet är inbyggt från början i Visula Studio Code och vi använder
+        <strong>ENTER</strong> för att köra vår
+        emmetsträng.</p>
+
+      <p><img src="emmet-klick.gif" alt="Klick" /></p>
+
+      <p>Du kan även trycka på <strong>skiftnyckeln</strong> som dyker upp för att
+        köra
+        emmetsträngen.</p>
+
+      <p>Om det är så att man glömmer trycka på <strong>ENTER</strong> så kan man
+        ställa sig direkt efter sin emmetsträng och trycka <strong>CTRL +
+          MELLANSLAG</strong> för aktivera
+        den igen.</p>
+
+      <p>Läs gärna igenom <a
+          href="https://code.visualstudio.com/docs/editor/emmet">Emmet in Visual
+          Studio Code</a> i dokumentationen för Visual Studio Code.</p>
+
+      <h2>Skapa dokumentmallen</h2>
+
+      <p><img src="emmet-dokmall.gif" alt="Skapa dokumentmallen" /></p>
+
+      <p>För att skapa dokumentmallen (html) använder vi <strong>utropstecknet</strong>.</p>
+      <h2>Bygga emmetsträngar</h2>
+
+      <h3>Använda plustecknet</h3>
+
+      <p><img src="emmet-plus.gif" alt="Exempel 1" /></p>
+
+      <p>Använder man plustecknet så skapar man två element efter varandra.
+        Skriver vi <strong>h1+p</strong> kommer vi
+        således få först en h1:a och därefter ett p.</p>
+
+      <p>När vi har kört vår emmetsträng så får vi insättnigspunkter för
+        innehållet i taggarna och vi kan nu använda <strong>TAB</strong> för att
+        hoppa mellan dem.</p>
+
+      <h3>Använda gångertecknet</h3>
+
+      <p><img src="emmet-star.gif" alt="Gångertecken" /></p>
+
+      <p>Vill vi skapa flera element av samma typ så kan vi använda oss av
+        gångertecknet, t ex
+        <strong>p*3</strong>.</p>
+
+      <h3>Använda pil</h3>
+
+      <p><img src="emmet-pil1.gif" alt="Pil1" /></p>
+
+      <p>Med pilen kan vi lägga till barntaggar.</p>
+
+      <p><img src="emmet-pil2.gif" alt="Pil2" /></p>
+
+      <p>Vi kan även använda pilen tillsammans med <strong>lorem</strong> för att
+        fylla en tagg med innehåll.</p>
+
+      <h3>Använda parenteser</h3>
+
+      <h4>Exempel 1</h4>
+
+      <pre class="hljs"><code class="html">&lt;h1&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;/p&gt;
+      </code></pre>
+      
+      <p>Låt säga att vi vill skapa koden ovan med hjälp av emmet</p>
+      
+      <p><img src="emmet-parentes.gif" alt="Parenteser" /></p>
+
+      <p>För att göra det skriver vi <strong>h1+p*2+(ol&gt;li*2)+p</strong>.</p>
+      <p>Som du ser använder vi parenteser för att avgränsa delar av
+        emmetsträngen. Om
+        vi hade hoppat över parenteserna så skulle sista p-taggen återfinnas som
+        ett barnelement i listan.</p>
+
+      <h4 id="exempel-2">Exempel 2</h4>
+
+      <pre><code class="html">&lt;div class=&quot;card&quot;&gt;
+  &lt;h1&gt;&lt;/h1&gt;
+  &lt;img src=&quot;&quot; alt=&quot;&quot;&gt;
+  &lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+  &lt;h1&gt;&lt;/h1&gt;
+  &lt;img src=&quot;&quot; alt=&quot;&quot;&gt;
+  &lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;
+      </code></pre>
+
+      <p>Låt säga att vi vill skapa koden ovan med hjälp av emmet</p>
+
+      <p><img src="emmet-parentes2.gif" alt="Parenteser" /></p>
+
+      <p>För att göra det skriver vi <strong>(.card&gt;h1+img+p)*2</strong>.
+        Som du ser så räcker det med att skriva <strong>.card</strong> för att skapa en div med klassen
+        card.</p>
+
+      <h3>Sätta attribut</h3>
+
+      <p><img src="emmet-attribut1.gif" alt="Attribut-1" /></p>
+
+      <p>Med hjälp av fyrkantsparenteser kan vi sätta värdet på ett attribut.</p>
+      <p>Vill vi sätta flera attribut samtidigt använder vi ett mellanslag mellan
+        attributen, t ex
+        <strong>input[name=test value=test]</strong>.</p>
+
+      <h3>Lägga till innehåll</h3>
+
+      <p><img src="emmet-klammer.gif" alt="Klammer" /></p>
+
+      <p>Med hjälp av klammerparenteser (&ldquo;måsvingar&rdquo;) kan vi lägga
+        till innehåll i en tagg direkt i emmetsträngen.</p>
+
+      <p><img src="emmet-klammer2.gif" alt="Klammer" /></p>
+
+      <p>Här visar vi hur vi kan sätta både attribut och innehåll på en gång.</p>
+      <h3>Lägga till en
+        kommentar vid slutet på klasser/id:n</h3>
+
+      <p><img src="emmet-kommentar.gif" alt="Kommentar" /></p>
+
+      <p>Vill man lägga till en automatisk kommentar som visar var en
+        klass/id slutar använder vi pipetecknet + c, t ex <strong>.card&gt;(h1+p)|c</strong>.</p>
+      <h3>Lägga till flera klasser på en
+        gång</h3>
+
+      <p><img src="emmet-klasser.gif" alt="Klasser" /></p>
+
+      <p>Om man vill lägga till flera klasser på en gång så skriver man ihop
+        klasserna, t ex <strong>.klass1.klass2</strong>.</p>
+
+      <h3>Lägga till nummer</h3>
+
+      <p><img src="emmet-nummer.gif" alt="Nummer" /></p>
+
+      <p>Man kan med <strong>$-tecknet</strong> lägga till nummer. I exemplet här
+        skriver vi <strong>ul&gt;li.item${listpunkt $}*3</strong> och som du ser
+        kan vi numrera t ex både klassnamn och i innehållet.</p>
+
+      <h3>Emmet i formatmallen (CSS)</h3>
+
+      <p>Givetvis fungear emmet även i formatmallen.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Emmet</th>
+            <th>Resultat</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>m10</td>
+            <td>margin: 10px;</td>
+          </tr>
+
+          <tr>
+            <td>p10</td>
+            <td>padding: 10px;</td>
+          </tr>
+
+          <tr>
+            <td>bd</td>
+            <td>border: 1px solid #000;</td>
+          </tr>
+
+          <tr>
+            <td>fw</td>
+            <td>font-weight: normal;</td>
+          </tr>
+
+          <tr>
+            <td>fwb</td>
+            <td>font-weight: bold;</td>
+          </tr>
+
+          <tr>
+            <td>fw400</td>
+            <td>font-weight: 400;</td>
+          </tr>
+
+          <tr>
+            <td>fz20</td>
+            <td>font-size: 20px;</td>
+          </tr>
+
+          <tr>
+            <td>fz1.5rem</td>
+            <td>font-size: 1.5rem;</td>
+          </tr>
+
+          <tr>
+            <td>h150px</td>
+            <td>height: 150px;</td>
+          </tr>
+
+          <tr>
+            <td>w150px</td>
+            <td>width: 150px;</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Här har vi enbart listat några favoriter.</p>
+
+      <p>När man anger värden kan man ange dem med eller utan enhet. om man
+        utelämnar
+        enheten blir det i de flesta fall enheten px. Man har även förkortat vissa
+        populära
+        enheter, t ex:</p>
+
+      <ul>
+        <li>p ger %; <strong>m10p</strong> ger <strong>margin: 10%</strong>;</li>
+        <li>e ger em, <strong>m10e</strong> ger <strong>margin: 10em</strong>;</li>
+        <li>r ger rem, <strong>m10</strong>r ger <strong>margin: 10rem</strong>;</li>
+      </ul>
+
+      <p><img src="emmet-IntelliSense.gif" alt="Nummer" /></p>
+
+      <p>När det kommer till att skriva CSS-egenskaper är det inbyggda systemet
+        IntelliSense att rekommendera.</p>
+    </div>
+
+    <script src="highlight.pack.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+  </body>
+</html>
